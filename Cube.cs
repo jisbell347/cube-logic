@@ -8,10 +8,27 @@ public class Cube : MonoBehaviour {
     public string newName = "Cubey";
     public bool isRotated = false;
 
-    // Used for initialization
-    void Start ()
-    {
-        Debug.Log("Hello world!");
+    // Used for initialization.
+    void Start (){
+        transform.name = ImproveName(newName);
+
+        if ("cats" == "dogs"){
+            Debug.Log("We're here!");
+        }
+
+        if ("cats" != "dogs")
+        {
+            Debug.Log("We're there!");
+        }
+    }
+
+    // Called once per frame.
+    void Update(){
+        transform.localScale = Vector3.one * sizeModifier;
+    }
+
+    string ImproveName(string originalString){
+        return "-[" + originalString + "]-";
     }
 
 }
