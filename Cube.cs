@@ -4,5 +4,14 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour {
 
+    public float sizeModifier = 2.5f;
+    public string newName = "Cubey";
+    public bool isRotated = false;
+
+    // Used for initialization
+    void Start ()
+    {
+        Debug.Log("Hello world!");
+    }
 
 }
